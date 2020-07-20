@@ -1,0 +1,31 @@
+.equipment-card {
+    @include col(1/6);
+
+    @include sm{
+        @include col(1/2);
+    
+    }
+
+    &__thumb-wrap {
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: -2px 2px 6px rgba(2, 183, 150, 0.25);
+        overflow: hidden;
+        width: 100%;
+        padding-top: 100%;
+        border-radius: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__thumb {
+        position: absolute;
+        @include center();
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+    }
+
+}

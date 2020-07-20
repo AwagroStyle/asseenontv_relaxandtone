@@ -1,0 +1,35 @@
+.burger {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 37px;
+    width: 50px;
+    cursor: pointer;
+
+    @include sm {
+        height: 22px;
+        width: 30px;
+    }
+
+    &_close {
+        justify-content: center;
+        .burger__line {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform:  rotate(-45deg);
+            }
+        }
+    }
+
+    &__line {
+        height: 2px;
+        background: #000;
+        transition: $fast;
+    }
+
+}

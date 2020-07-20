@@ -1,0 +1,93 @@
+.plus-card {
+    @include col(1/4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(81.34deg, #8ae698 24.32%, #08b688 90.97%);
+    box-shadow: 4px 4px 14px rgba(87, 87, 87, 0.25);
+    border-radius: 9px;
+    padding: 52px 30px 36px;
+    transition: $fast;
+
+    @include md {
+        @include col(1/2);
+        padding: 25px;
+        align-items: flex-start;
+
+    }
+
+
+    @include sm {
+        @include col(1);
+        flex-direction: row;
+        box-shadow: unset;
+
+    }
+
+
+    &:hover {
+        box-shadow: 1px 1px 23px rgba(58, 39, 39, 0);
+        background: linear-gradient(255.42deg, #8AE698 15.21%, #08B688 115.44%);
+
+        .plus-card__check {
+            background: #FFFFFF;
+            box-shadow: -4px 4px 10px rgba(2, 183, 150, 0.25);
+
+            &::after {
+                background-color: $green;
+            }
+        }
+
+        .plus-card__title,
+        .plus-card__desc {
+            color: white
+        }
+    }
+
+    &__check {
+        @include circle(100px);
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        background: $green-gr;
+        box-shadow: -2px 2px 6px rgba(2, 183, 150, 0.25);
+        margin: 0 0 50px 0;
+        transition: $fast;
+
+        @include sm {
+            @include circle(65px);
+            margin: 0 24px 0 0;
+
+        }
+
+        &::after {
+            content: "";
+            width: 34px;
+            height: 26px;
+            mask-image: url("data:image/svg+xml,%3Csvg width='30' height='22' viewBox='0 0 30 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.7475 21.8558C10.3727 21.8558 10.0132 21.6954 9.74804 21.41L1.26587 12.2705C0.713715 11.6758 0.713715 10.7116 1.26587 10.1174C1.81789 9.52174 2.71302 9.52174 3.26504 10.1174L10.7475 18.1787L26.7124 0.978809C27.2642 0.383662 28.1596 0.383662 28.7114 0.978809C29.2637 1.573 29.2637 2.5372 28.7114 3.13185L11.747 21.41C11.4821 21.6954 11.1224 21.8558 10.7475 21.8558Z' fill='white'/%3E%3C/svg%3E%0A");
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            background-color: #fff;
+            transition: $fast;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 18px;
+        margin-bottom: 17px;
+        transition: $fast;
+
+        @include sm {
+            margin-bottom: 12px;
+
+        }
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 16px;
+        transition: $fast;
+    }
+}

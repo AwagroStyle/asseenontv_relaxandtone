@@ -1,0 +1,173 @@
+.footer {
+    padding-top: 38px;
+    background: #2C3D4F;
+
+    &__logo-wrap {
+        @include col(2/12);
+        margin-bottom: 24px;
+
+        @include md {
+            @include col(3/12);
+
+        }
+
+        @include sm {
+            @include col(1/2);
+
+        }
+
+    }
+
+    &__logo {
+        width: 153px;
+    }
+
+    &__owner-info {
+        @include col(4/12);
+        margin-bottom: 37px;
+
+        @include md {
+            @include col(9/12);
+
+        }
+
+        @include sm {
+            @include col(1);
+
+        }
+
+        p {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+    }
+
+    &__menu {
+        @include col(3/12);
+        @include offset(1/12);
+        list-style-type: none;
+        margin-bottom: 30px;
+
+        @include lg {
+            @include offset();
+
+        }
+
+        @include md {
+            @include col(6/12);
+
+        }
+
+        @include sm {
+            @include col(1/2);
+
+        }
+
+        &-item {
+            margin-bottom: 15px;
+        }
+
+        &-link {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+            color: #fff;
+        }
+    }
+
+    &__contacts {
+        @include col(2/12);
+
+        @include lg {
+            @include col(3/12);
+
+        }
+
+        @include md {
+            @include col(6/12);
+
+        }
+
+        @include sm {
+            @include col(1/2);
+
+        }
+    }
+
+    &__phone-list {
+        list-style: none;
+        margin-bottom: 40px;
+    }
+
+    &__phone-item {
+        position: relative;
+        margin-bottom: 24px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.0558 15C11.4317 15 10.6779 14.8436 9.849 14.5308C8.0317 13.8456 6.05445 12.4915 4.28155 10.7186C2.50813 8.9452 1.15398 6.96746 0.468329 5.15017C-0.154762 3.49785 -0.156275 2.14169 0.464797 1.52112C0.554099 1.43182 0.644914 1.33596 0.738756 1.23707C1.30534 0.64123 1.94558 -0.0292828 2.7942 0.000988674C3.37895 0.0252059 3.94553 0.388464 4.52574 1.11044C6.24012 3.24256 5.46718 4.00237 4.57266 4.88327L4.41474 5.03968C4.26843 5.18599 3.99195 5.86356 6.56403 8.43563C7.40356 9.27516 8.11948 9.88967 8.69162 10.2615C9.05185 10.4956 9.69613 10.8498 9.9605 10.5854L10.1194 10.425C10.9993 9.53247 11.7591 8.76206 13.8898 10.4749C14.6117 11.0551 14.9745 11.6212 14.9987 12.207C15.0335 13.0551 14.358 13.6968 13.7616 14.2629C13.6632 14.3567 13.5674 14.4475 13.4781 14.5363C13.1698 14.8451 12.6769 15 12.0558 15Z' fill='%2328282C'/%3e%3c/svg%3e ");
+            mask-repeat: no-repeat;
+            background-color: #fff;
+            mask-size: contain;
+
+            @include sm {
+                position: relative;
+                vertical-align: middle;
+                left: 0;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__phone-link {
+        font-family: $num-font;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        white-space: nowrap;
+
+        @include sm {
+            font-size: 14px;
+        }
+    }
+
+    &__social-list {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__social-item {
+        @include circle(30px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+
+    }
+
+    &__copyright {
+        background: #1A2E43;
+        font-size: 14px;
+        text-align: center;
+        padding: 17px;
+        color: #fff;
+    }
+}

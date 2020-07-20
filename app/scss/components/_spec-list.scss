@@ -1,0 +1,93 @@
+.spec-list {
+    @include col(10/12);
+    position: relative;
+    padding: 44px 73px;
+    margin: 0 auto;
+    background: #FFFF;
+    box-shadow: -10px 10px 20px rgba(17, 90, 77, 0.16);
+    border-radius: 13px;
+
+    @include lg {
+        @include col();
+
+    }
+
+    @include sm {
+        padding: 28px 15px 265px;
+    }
+
+    &__thumb {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @include md {
+            right: -20%;
+        }
+
+        @include sm {
+            max-width: 450px;
+            right: -30%;
+
+        }
+    }
+
+    &__info {
+        max-width: 518px;
+    }
+
+    &__desc {
+        margin-bottom: 48px;
+        letter-spacing: 0.03em;
+        color: #6D6D6D;
+
+        @include sm{
+            margin-bottom: 35px;
+        
+        }
+    }
+
+    &__list {
+        margin-bottom: 48px;
+        list-style-type: none;
+
+        @include sm{
+            margin-bottom: 35px;
+        
+        }
+
+        &-item {
+            margin-bottom: 11px;
+            padding-left: 25px;
+            position: relative;
+
+            &::before {
+                @include circle(8px);
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 6px;
+                background-image: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4.82056' cy='4' r='4' fill='%236469C7'/%3E%3C/svg%3E%0A");
+
+            }
+        }
+    }
+
+    &__dev {
+        margin-bottom: 11px;
+    }
+
+    &__gar {
+        margin-top: 40px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.03em;
+        color: #979797;
+
+        @include sm {
+            max-width: 125px;
+        }
+    }
+}

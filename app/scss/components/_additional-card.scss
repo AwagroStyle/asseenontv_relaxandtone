@@ -1,0 +1,26 @@
+.additional-card {
+    @include col(1/4);
+
+    @include md {
+        @include col(1/2);
+    }
+
+    &__thumb-wrap {
+        @include circle(130px);
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        background: #FFFFFF;
+        box-shadow: -4px 4px 15px rgba(7, 101, 84, 0.25);
+        margin-bottom: 27px;
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+    }
+
+}

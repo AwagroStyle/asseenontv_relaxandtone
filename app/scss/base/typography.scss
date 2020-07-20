@@ -1,0 +1,34 @@
+body {
+    font-family: $main-font;
+    font-size: $def-fs;
+    line-height: 1.4;
+    font-weight: 400;
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $title-font;
+}
+
+.s-title {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $black;
+
+    @include sm{
+        font-size: 26px;
+    }
+
+    &_white {
+        color: #fff;
+    }
+}
