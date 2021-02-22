@@ -130,4 +130,37 @@ $(function() {
     return false;
   });
 
+ // close popup
+ window.addEventListener('mousemove', function(e) {
+  if (!getCookie('exitPopupShowed')) {
+    if (e.clientY < 20) {
+      $('.close-popup').fadeIn(500);
+      setCookieExitPopup();
+    } 
+  } 
 });
+
+document.querySelector('.close-popup__overlay').addEventListener('click', function () {
+  $('.close-popup').fadeOut(500);
+});
+document.querySelector('.close-popup__cls-btn').addEventListener('click', function () {
+  $('.close-popup').fadeOut(500);
+});
+
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+};
+
+function setCookieExitPopup() {
+  // +1 день от текущей даты -> let date = new Date(Date.now() + 86400e3);
+    let date = new Date(Date.now() + 86400e3/3);
+    date = date.toUTCString();
+    document.cookie = "exitPopupShowed=true; expires=" + date;
+};
+
+
+
+})();
